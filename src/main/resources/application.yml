@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    password: ${DATASOURCE_PASSWORD:root}
+    driver-class-name: org.postgresql.Driver
+    username: ${DATASOURCE_USERNAME:postgres}
+    url: jdbc:postgresql://${DATASOURCE_HOST:localhost}:${DATASOURCE_PORT:5432}/${DATASOURCE_DB_NAME:ase}
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: 'false'
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
